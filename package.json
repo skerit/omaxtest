@@ -1,28 +1,32 @@
 {
-	"name": "omaxtest",
-	"version": "1.0.0",
-	"description": "Openmax & openvg video decode proof-of-concept foor the raspberry pi",
-	"author": "Jelle De Loecker <jelle@develry.be>",
-	"keywords": [
-		"raspberry",
-		"raspberry pi",
-		"raspberry-pi",
-		"raspi",
-		"openmax",
-		"openvg"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/skerit/omaxtest.git"
-	},
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"dependencies": {
-		"openmax": "1.6.x",
-		"openvg-canvas": "skerit/node-openvg-canvas",
-		"openvg": "ReneHollander/node-openvg"
-	},
-	"license": "MIT"
+  "name": "omaxtest",
+  "version": "1.0.0",
+  "description": "Openmax & openvg video decode proof-of-concept foor the raspberry pi",
+  "author": "Jelle De Loecker <jelle@develry.be>",
+  "keywords": [
+    "raspberry",
+    "raspberry pi",
+    "raspberry-pi",
+    "raspi",
+    "openmax",
+    "openvg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/skerit/omaxtest.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "dependencies": {
+    "openmax": "1.6.x",
+    "openvg-canvas": "skerit/node-openvg-canvas",
+    "openvg": "ReneHollander/node-openvg",
+    "snyk": "^1.189.0"
+  },
+  "license": "MIT",
+  "snyk": true
 }
